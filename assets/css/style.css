@@ -1,0 +1,72 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header > .background {
+  background: url("../images/shifumi.png") center center no-repeat;
+  height: 15em;
+}
+header > h1 {
+  text-align: center;
+}
+
+#container {
+  background-color: rgb(219, 216, 206);
+  height: 20em;
+  margin: 0 15em 0 15em;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+#container > img {
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+#containWinLose > #winCard {
+  display: none;
+  background-color: rgb(123, 187, 123);
+  margin: 0 20em 0 20em;
+  border-radius: 15px;
+}
+#containWinLose > #winCard > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 2em;
+  margin-bottom: 1%;
+}
+#containWinLose > #looseCard {
+  display: none;
+  background-color: rgb(222, 109, 109);
+  margin: 0 20em 0 20em;
+  border-radius: 15px;
+}
+#containWinLose > #looseCard > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 2em;
+  margin-bottom: 1%;
+}
+#containWinLose > #drawCard {
+  display: none;
+  background-color: rgb(247, 247, 143);
+  margin: 0 20em 0 20em;
+  border-radius: 15px;
+}
+#containWinLose > #drawCard > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 2em;
+  margin-bottom: 1%;
+}/*# sourceMappingURL=style.css.map */
