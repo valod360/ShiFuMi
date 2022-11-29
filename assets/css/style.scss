@@ -20,10 +20,16 @@ header {
         >p{
             display: flex;
             border: 1px solid black;
-            width: 10%;
+            width: 15%;
             height: 2.5rem;
             justify-content: center;
             align-items: center;
+        }
+        >#win{
+            border: 1px solid rgb(44, 208, 44);
+        }
+        >#lose{
+            border: 1px solid red;
         }
     }
     

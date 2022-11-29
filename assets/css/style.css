@@ -21,10 +21,16 @@ header > div {
 header > div > p {
   display: flex;
   border: 1px solid black;
-  width: 10%;
+  width: 15%;
   height: 2.5rem;
   justify-content: center;
   align-items: center;
+}
+header > div > #win {
+  border: 1px solid rgb(44, 208, 44);
+}
+header > div > #lose {
+  border: 1px solid red;
 }
 header > h1 {
   text-align: center;
