@@ -4,12 +4,37 @@ body {
   box-sizing: border-box;
 }
 
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
 header > .background {
   background: url("../images/shifumi.png") center center no-repeat;
   height: 15em;
 }
+header > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header > div > p {
+  display: flex;
+  border: 1px solid black;
+  width: 15%;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+header > div > #win {
+  border: 1px solid rgb(44, 208, 44);
+}
+header > div > #lose {
+  border: 1px solid red;
+}
 header > h1 {
   text-align: center;
+  grid-column: 2/3;
 }
 
 #container {
@@ -28,13 +53,30 @@ header > h1 {
   cursor: pointer;
 }
 
-#containWinLose > #winCard {
+#containWinLose > .winCard {
   display: none;
   background-color: rgb(123, 187, 123);
   margin: 0 20em 0 20em;
   border-radius: 15px;
 }
-#containWinLose > #winCard > p {
+#containWinLose > .winCard > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  height: 2em;
+  margin-bottom: 1%;
+}
+#containWinLose > #winCard {
+  display: none;
+}
+#containWinLose > .looseCard {
+  display: none;
+  background-color: rgb(222, 109, 109);
+  margin: 0 20em 0 20em;
+  border-radius: 15px;
+}
+#containWinLose > .looseCard > p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,11 +86,14 @@ header > h1 {
 }
 #containWinLose > #looseCard {
   display: none;
-  background-color: rgb(222, 109, 109);
+}
+#containWinLose > .drawCard {
+  display: none;
+  background-color: rgb(247, 247, 143);
   margin: 0 20em 0 20em;
   border-radius: 15px;
 }
-#containWinLose > #looseCard > p {
+#containWinLose > .drawCard > p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,15 +103,4 @@ header > h1 {
 }
 #containWinLose > #drawCard {
   display: none;
-  background-color: rgb(247, 247, 143);
-  margin: 0 20em 0 20em;
-  border-radius: 15px;
-}
-#containWinLose > #drawCard > p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
-  height: 2em;
-  margin-bottom: 1%;
 }/*# sourceMappingURL=style.css.map */
