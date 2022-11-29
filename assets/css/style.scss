@@ -6,13 +6,30 @@ body {
 }
 
 header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     >.background {
         background: url('../images/shifumi.png') center center no-repeat;
         height: 15em;
     }
-
+    >div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        >p{
+            display: flex;
+            border: 1px solid black;
+            width: 10%;
+            height: 2.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    
     >h1 {
         text-align: center;
+        grid-column: 2 / 3;
     }
 }
 
@@ -34,11 +51,12 @@ header {
 }
 
 #containWinLose {
-    >#winCard {
+    >.winCard {
         display: none;
         background-color: rgb(123, 187, 123);
         margin: 0 20em 0 20em;
         border-radius: 15px;
+
         >p {
             display: flex;
             align-items: center;
@@ -48,11 +66,17 @@ header {
             margin-bottom: 1%;
         }
     }
-    >#looseCard{
+
+    >#winCard {
+        display: none;
+    }
+
+    >.looseCard {
         display: none;
         background-color: rgb(222, 109, 109);
         margin: 0 20em 0 20em;
         border-radius: 15px;
+
         >p {
             display: flex;
             align-items: center;
@@ -62,11 +86,17 @@ header {
             margin-bottom: 1%;
         }
     }
-    >#drawCard{
+
+    >#looseCard {
+        display: none;
+    }
+
+    >.drawCard {
         display: none;
         background-color: rgb(247, 247, 143);
         margin: 0 20em 0 20em;
         border-radius: 15px;
+
         >p {
             display: flex;
             align-items: center;
@@ -75,5 +105,9 @@ header {
             height: 2em;
             margin-bottom: 1%;
         }
+    }
+
+    >#drawCard {
+        display: none;
     }
 }
